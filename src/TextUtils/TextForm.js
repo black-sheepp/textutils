@@ -8,12 +8,15 @@ export default function TextForm(props) {
      };
      const handleUppercase = () => {
           setText(text.toUpperCase());
+          props.showAlert("success","Text convert to Uppercase!")
      };
      const handleLowercase = () => {
           setText(text.toLowerCase());
+          props.showAlert("success","Text convert to Lowercase!")
      };
      const handleClearText = () => {
           setText("");
+          props.showAlert("warning","Text box cleared! ")
      };
      return (
           <div className="container-sm my-3">
