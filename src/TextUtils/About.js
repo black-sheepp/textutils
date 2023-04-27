@@ -4,7 +4,7 @@ export default function About() {
      return (
           <div className="container my-3">
                <h3>About</h3>
-               <h6>
+               <p>
                     Apart from counting words and characters, our online editor
                     can help you to improve word choice and writing style, and,
                     optionally, help you to detect grammar mistakes and
@@ -32,7 +32,7 @@ export default function About() {
                     person would need in order to understand the words you’re
                     using. Disclaimer: We strive to make our tools as accurate
                     as possible but we cannot guarantee it will always be so.
-               </h6>
+               </p>
           </div>
      );
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
      return (
           <nav
                className="navbar navbar-expand-lg bg-body-tertiary "
-               data-bs-theme="dark"
+               data-bs-theme={`${props.darkMode}`}
           >
                <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
@@ -40,7 +40,7 @@ export default function Navbar() {
                               </li>
                          </ul>
                          <span className="navbar-text">
-                              <div className="form-check form-switch">
+                              <div className="form-check form-switch" onClick={props.handleDarkMode}>
                                    <input
                                         className="form-check-input"
                                         type="checkbox"
