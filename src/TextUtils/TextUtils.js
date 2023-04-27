@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import TextForm from "./TextForm";
 import About from "./About";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Alert from "./Alert";
 
 export default function TextUtils() {
@@ -14,8 +14,8 @@ export default function TextUtils() {
           });
 
           setTimeout(()=>{
-            
-          })
+            setAlert(null)
+          },1500)
      };
      const [darkMode, setDarkMode] = useState("light");
      const handleDarkMode = () => {

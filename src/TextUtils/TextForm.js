@@ -50,6 +50,9 @@ export default function TextForm(props) {
                          Words: <h4>{text.split(" ").length - 1}</h4>
                     </span>
                     <span>
+                         Reading Time: <h4>{(0.008 * text.split(" ").length - 0.008).toFixed(2)} <span>mins</span></h4> 
+                    </span>
+                    <span>
                          <h4>Preview: </h4> 
                          {text?<h6>{text}</h6>:"Enter inside the text box to preview here."}
                          
