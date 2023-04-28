@@ -48,7 +48,7 @@ export default function TextForm(props) {
                          Characters: <h4>{text.length}</h4>
                     </span>
                     <span>
-                         Words: <h4>{text.split(" ").filter((ele)=>ele.length!==0).length}</h4>
+                         Words: <h4>{text.split(/\s+/).filter((ele)=>ele.length!==0).length}</h4>
                     </span>
                     <span>
                          Reading Time: <h4>{(0.008 * text.split(" ").length - 0.008).toFixed(2)} <span>mins</span></h4> 

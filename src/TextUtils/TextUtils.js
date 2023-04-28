@@ -13,9 +13,9 @@ export default function TextUtils() {
                type: alertType,
           });
 
-          setTimeout(()=>{
-            setAlert(null)
-          },1500)
+          setTimeout(() => {
+               setAlert(null);
+          }, 1000);
      };
      const [darkMode, setDarkMode] = useState("light");
      const handleDarkMode = () => {
@@ -23,12 +23,12 @@ export default function TextUtils() {
                setDarkMode("dark");
                document.body.style.backgroundColor = "black";
                document.body.style.color = "white";
-               showAlert("success","Dark mode has been enabled");
+               showAlert("success", "Dark mode has been enabled");
           } else {
                setDarkMode("light");
                document.body.style.backgroundColor = "white";
                document.body.style.color = "black";
-               showAlert("success","Light mode has been enabled");
+               showAlert("success", "Light mode has been enabled");
           }
      };
 
@@ -37,7 +37,7 @@ export default function TextUtils() {
                <Navbar handleDarkMode={handleDarkMode} darkMode={darkMode} />
                <Alert alert={alert} />
                <Routes>
-                    <Route path="/" element={<TextForm heading="Enter the text here:" showAlert={showAlert}/>} />
+                    <Route path="/" element={<TextForm heading="Enter the text here:" showAlert={showAlert} />} />
                     <Route path="/about" element={<About />} />
                </Routes>
           </Router>
