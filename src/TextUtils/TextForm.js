@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 export default function TextForm(props) {
      const [text, setText] = useState("");
 
@@ -32,22 +33,22 @@ export default function TextForm(props) {
                          onChange={handleOnchange}
                     />
                </div>
-               <button onClick={handleUppercase} type="button" className="btn btn-dark mx-2">
+               <button onClick={handleUppercase} type="button" className="btn btn-dark mx-2 mb-2">
                     Convert to Uppercase
                </button>
-               <button onClick={handleLowercase} type="button" className="btn btn-dark mx-2">
+               <button onClick={handleLowercase} type="button" className="btn btn-dark mx-2 mb-2">
                     Convert to Lowercase
                </button>
-               <button onClick={handleClearText} type="button" className="btn btn-dark mx-2">
+               <button onClick={handleClearText} type="button" className="btn btn-dark mx-2 mb-2">
                     Clear Text
                </button>
-
                <div className="display-info mt-4">
+                    <h3>Text Summary</h3>
                     <span>
                          Characters: <h4>{text.length}</h4>
                     </span>
                     <span>
-                         Words: <h4>{text.split(" ").length - 1}</h4>
+                         Words: <h4>{text.split(" ").filter((ele)=>ele.length!==0).length}</h4>
                     </span>
                     <span>
                          Reading Time: <h4>{(0.008 * text.split(" ").length - 0.008).toFixed(2)} <span>mins</span></h4> 
